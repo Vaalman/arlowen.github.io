@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arløwen</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    background:#050505;
+    color:#cfcfcf;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial, sans-serif;
+    overflow:hidden;
+    opacity:0;
+    animation:fadeIn 1.4s ease forwards;
+}
+
+@keyframes fadeIn{
+    to{opacity:1;}
+}
+
+.container{
+    text-align:center;
+    width:100%;
+    max-width:1400px;
+    padding:3rem 2rem;
+}
+
+h1{
+    font-family:"Microsoft Yi Baiti", serif;
+    font-weight:normal;
+    font-size:min(8vw, 8rem);
+    letter-spacing:0.42em;
+    color:#d2d2d2;
+    user-select:none;
+    white-space:nowrap;
+    line-height:1;
+    animation:glowPulse 10s ease-in-out infinite;
+}
+
+@keyframes glowPulse{
+    0%,100%{
+        text-shadow:
+            0 0 6px rgba(255,235,210,0.32),
+            0 0 14px rgba(255,220,180,0.22),
+            0 0 28px rgba(255,210,150,0.12),
+            0 0 50px rgba(255,190,120,0.06);
+    }
+
+    50%{
+        text-shadow:
+            0 0 10px rgba(255,245,225,0.62),
+            0 0 22px rgba(255,230,190,0.40),
+            0 0 42px rgba(255,210,150,0.22),
+            0 0 75px rgba(255,180,90,0.10);
+    }
+}
+
+.links{
+    margin-top:4rem;
+    display:flex;
+    justify-content:center;
+    gap:3.2rem;
+    flex-wrap:wrap;
+}
+
+.links a{
+    color:#7f7f7f;
+    text-decoration:none;
+    font-size:0.72rem;
+    letter-spacing:0.34em;
+    text-transform:uppercase;
+    display:inline-block;
+    transition:
+        color 0.28s ease,
+        text-shadow 0.28s ease;
+}
+
+.links a:hover{
+    color:#d5d5d5;
+    text-shadow:0 0 10px rgba(255,255,255,0.12);
+}
+
+.links a::after{
+    content:"";
+    display:block;
+    width:0%;
+    height:1px;
+    margin-top:0.45rem;
+    background:#8d8d8d;
+    transition:width 0.28s ease;
+}
+
+.links a:hover::after{
+    width:100%;
+}
+
+.tagline{
+    margin-top:3.5rem;
+    color:#4f4f4f;
+    font-size:0.62rem;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    user-select:none;
+}
+
+@media (max-width:700px){
+
+    h1{
+        font-size:min(11vw, 4rem);
+        letter-spacing:0.18em;
+    }
+
+    .links{
+        gap:1.8rem;
+        margin-top:3rem;
+    }
+
+    .links a{
+        font-size:0.68rem;
+        letter-spacing:0.22em;
+    }
+
+    .tagline{
+        margin-top:2.5rem;
+        font-size:0.58rem;
+        letter-spacing:0.18em;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>A r l ø w e n</h1>
+
+    <div class="links">
+            <a href="https://www.youtube.com/@Arl%C3%B8wenmusic" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/arlowen.music" target="_blank">Instagram</a>
+            <a href="https://arlowen.bandcamp.com/" target="_blank">Bandcamp</a>
+    </div>
+
+    <div class="tagline">
+        ambient transmissions
+    </div>
+
+</div>
+</body>
+</html>
